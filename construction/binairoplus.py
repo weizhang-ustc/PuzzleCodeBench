@@ -464,7 +464,7 @@ def return_data():
             ['B', 'W', 'B', 'B', 'W', 'W'],
             ['B', 'W', 'B', 'W', 'W', 'B'],
             ['W', 'B', 'W', 'B', 'B', 'W'],
-            ['B', 'W', 'B', 'B', 'B', 'W'],
+            ['B', 'W', 'W', 'B', 'B', 'W'],
         ],
         'id': 'ref',
         'rules': RULES,

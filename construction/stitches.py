@@ -14,11 +14,12 @@ except ModuleNotFoundError:
     from construction._common import normalize_size_keys
     from construction._render import save_square_figure
 
+# 1. Every pair of orthogonally adjacent cells from different regions is connected by exactly one stitch.
 
 RULES = '''
 **Core Rules:**
 Place stitches so that:
-1. Every pair of orthogonally adjacent cells from different regions is connected by exactly one stitch.
+1. Each pair of neighboring regions must be connected by exactly one stitch, and each stitch must connect cells from different regions.
 2. A stitch connects two orthogonally adjacent holes.
 3. Two stitches cannot share a hole.
 4. Row and column clues give the exact number of used holes in each hole-row and hole-column.

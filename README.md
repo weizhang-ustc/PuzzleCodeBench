@@ -39,5 +39,5 @@ python scripts/print_results.py
 ```
 
 
-All Results are computed and saved in `results/`.
-All Models API outputs are in `results/results-*.jsonl`.
+Results are computed and saved in `results/`.
+Models API outputs are in `results/results-*.jsonl`.

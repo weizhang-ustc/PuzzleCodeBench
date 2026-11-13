@@ -43,10 +43,10 @@ Fill the `N x N` grid with building heights `1..N` so that:
    - `L` (left): top to bottom
    - `R` (right): top to bottom
 4. **Observation** has four parts:
-   - `U`: top clues list
-   - `D`: bottom clues list
-   - `L`: left clues list
-   - `R`: right clues list
+   - `U`: top clues list (`int` or `None`)
+   - `D`: bottom clues list (`int` or `None`)
+   - `L`: left clues list (`int` or `None`)
+   - `R`: right clues list (`int` or `None`)
 5. **Answer:** full solved `N x N` 2D list (list of lists) of integers.
 '''
 

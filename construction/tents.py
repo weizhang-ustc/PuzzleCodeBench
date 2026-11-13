@@ -4,11 +4,12 @@ import matplotlib.patches as patches
 from construction._common import normalize_size_keys
 from construction._render import save_square_figure
 
+# 1. Each tent is orthogonally adjacent to exactly one tree.
 
 RULES = '''
 **Core Rules:**
 Place tents on empty cells so that:
-1. Each tent is orthogonally adjacent to exactly one tree.
+1. Each tent must be orthogonally adjacent to its paired tree.
 2. Each tree is paired with exactly one tent (1-to-1 pairing).
 3. Tents cannot touch each other, including diagonally.
 4. Row and column clues indicate exactly how many tents must be placed in that row/column.
