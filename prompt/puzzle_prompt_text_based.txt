@@ -1,0 +1,22 @@
+{image}
+You are an expert Algorithm Designer, a Python Developer, and a strict answer generator. Your objective is to solve the target puzzle correctly and return the final answer in a Python-parseable format.
+CRITICAL: You may reason in natural language if needed, but your response must end with the final answer in a strictly extractable format.
+
+## Rules
+{rules}
+
+## Input Context
+- You are provided with a **single image** of the target puzzle.
+- Reference format for how to structure your observation:
+  {ref_observation}
+
+## Critical Constraints
+1. **Output Format (Ultra-Strict):** Your response can include reasoning, but it MUST end with exactly one final ```python code block containing the answer only.
+   - The final code block must be the last thing in the response.
+   - Inside that code block, include only a Python-parseable literal answer (for example parseable by `ast.literal_eval`), or a plain Python string literal if the answer format is a string.
+   - Do NOT include variable assignments, function definitions, imports, JSON wrappers, or explanatory comments inside the final code block.
+2. **Freedom of Method:** You may use any valid reasoning strategy to solve the puzzle. You do NOT need to produce solver code or a formal observation object.
+3. **Correctness First:** The final answer inside the last `python` code block must match the puzzle's required answer format exactly.
+4. **Single Extractable Answer:** There must be exactly one final `python` code block, and it must contain only the answer literal and nothing else.
+
+OUTPUT YOUR RESPONSE NOW:

@@ -1,0 +1,31 @@
+{image}
+You are an expert Algorithm Designer, a Python Developer, and a strict Code Generator. Your objective is to translate human-like puzzle-solving logic (deduction, pattern recognition) into highly efficient, generalized Python solvers.
+CRITICAL: DO NOT attempt to manually solve the specific puzzle instance shown in the image step-by-step. Focus purely on abstracting the mechanics, choosing a clean observation schema, and designing the Python solver.
+
+## Rules
+{rules}
+
+## Input Context
+- You are provided with a **single image** of the target puzzle.
+- No reference observation format is provided. You must infer a clean, minimal, and general Python dictionary schema for the parsed puzzle state yourself.
+
+## Critical Constraints
+1. **Output Format (Ultra-Strict):** Your response MUST be raw, executable Python source code ONLY.
+   - NEVER include introductory text, concluding remarks, or any "thought" process.
+   - Prefer raw Python output. If markdown fencing is used, output exactly one ```python block and nothing else.
+   - The very first line of your output MUST be `OBSERVATION = ` followed immediately by a Python literal dictionary (parseable by `ast.literal_eval`) representing the parsed image context.
+   - `OBSERVATION` must be a pure Python literal only (no function calls, comprehensions, variable references, or constructors).
+   - Any auxiliary explanation must be written strictly as Python comments (`#`).
+2. **Schema Design Requirement:** Since no reference observation is provided, you must define a compact, self-consistent, and generalized observation schema that is sufficient for the solver logic.
+3. **Mimic Human Solving Process:** Your algorithm MUST structurally mirror how a human logically deduces the puzzle. You must implement specific human-like solving techniques, explicit deductive rules, and aggressive constraint propagation to drastically reduce the search space. Pure, unoptimized brute-force search (like naive DFS/BFS) is STRICTLY PROHIBITED.
+4. **Efficiency as the Ultimate Metric:** The code's efficiency—specifically the absolute execution runtime and the exact number of logical execution steps (or recursive depths)—is the final and core evaluation metric. Your code must include highly efficient pruning logic. Inefficient code that relies on blind guessing will result in a Time Limit Exceeded (TLE) failure.
+5. **Generalization (No Hardcoding):** Your code must be a generalized solver capable of handling different grid sizes, initial states, and difficulty levels based purely on the parsed observation input. DO NOT hardcode intermediate steps or the solution for the provided image.
+6. **No External Solvers (Crucial):** You are STRICTLY FORBIDDEN from using constraint solvers or mathematical optimization libraries (e.g., `z3`, `ortools`, `pulp`, `cvxpy`). You must implement the search/inference logic entirely from scratch using standard Python built-in libraries.
+7. **Code Structure Requirements:**
+   - You MUST define a main solving function: `def solve(observation):` returning the final string answer or "No Solution".
+   - Do NOT reassign `OBSERVATION` later in the code.
+   - You MUST include an execution block at the very bottom exactly as follows:
+     if __name__ == "__main__":
+         print(solve(OBSERVATION))
+
+OUTPUT YOUR RAW PYTHON CODE NOW:

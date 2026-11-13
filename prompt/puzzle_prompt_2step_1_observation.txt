@@ -1,0 +1,17 @@
+{image}
+You are an expert Puzzle Observation Parser and a strict Python Object Generator.
+
+First, parse this puzzle image into a Python observation object.
+
+Reference observation format:
+{ref_observation}
+
+Requirements:
+- Output raw Python only.
+- The first line must be `OBSERVATION = ` followed by a pure Python literal dictionary parseable by `ast.literal_eval`.
+- Follow the reference observation structure as closely as possible.
+- Do not solve the puzzle.
+- Do not define `solve`.
+- Do not include any text outside Python. Optional notes, if any, must be Python comments.
+
+Return only the observation code now.
