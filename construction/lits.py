@@ -22,12 +22,14 @@ from construction._render import save_square_figure
 # 4. **Answer:** same-sized grid using one of `L/I/T/S` for shaded cells and `None` for non-shaded cells.
 # '''
 
+# 3. Two orthogonally adjacent regions cannot use the same tetromino type (rotation/reflection counts as the same type).
+
 RULES = '''
 **Core Rules:**
 Shade cells so that:
 1. In every region, shaded cells form exactly one tetromino of size 4.
 2. Allowed tetromino types are `L`, `I`, `T`, `S` (`O` is forbidden because 2x2 shaded blocks are forbidden).
-3. Two orthogonally adjacent regions cannot use the same tetromino type (rotation/reflection counts as the same type).
+3. Tetrominoes of the same type cannot touch orthogonally; rotations and reflections count as the same type.
 4. All shaded cells in the whole grid must be orthogonally connected.
 5. No 2x2 block can be fully shaded.
 
